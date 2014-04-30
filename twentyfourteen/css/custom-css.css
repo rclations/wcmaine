@@ -10,3 +10,30 @@ which means that your rules can take precedence and override the theme CSS
 rules. Just write here what you want to change, you don't need to copy all
 your theme's stylesheet content.
 */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#page {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 783px) {
+	.masthead-fixed .site-header {
+		position: relative;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#page {
+		max-width: 1170px;
+	}
+}
+
+.search-toggle {
+	display: none;
+}
