@@ -1,5 +1,8 @@
 @import  "http://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
-@import  "http://fonts.googleapis.com/css?family=Tauri";
+
+body {
+	background-size: cover;
+}
 
 body.admin-bar {
 	background-position: center 32px;
@@ -11,6 +14,7 @@ body.admin-bar {
 
 body,button,input,select,textarea,.comment-reply-title,.comments-title {
 	font-family: 'Open Sans', sans-serif;
+	color: #333;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -18,12 +22,23 @@ h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
 }
 
+p {
+	word-wrap: normal;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+}
+
 a,.widget a,.content-sidebar .widget a {
 	color: #174374;
 }
 
 a:hover,.widget a:hover,.content-sidebar .widget a:hover {
-	color: #1ca574;
+	color: #114374;
+}
+
+.entry-title a:hover {
+	color: #114375;
 }
 
 iframe {
@@ -43,10 +58,10 @@ iframe {
 	max-width: 100% !important;
 }
 
-#page {
+.site {
 	display: block;
 	margin: 0 auto;
-	max-width: 1260px;
+	max-width: 959px;
 	background-color: transparent;
 }
 
@@ -61,6 +76,7 @@ iframe {
 .site-header {
 	background-color: rgba(0,0,0,0.6);
 	position: fixed;
+	max-width: 959px;
 	top: 0;
 }
 
@@ -135,7 +151,8 @@ iframe {
 }
 
 .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.page-content {
-	max-width: 80%;
+	max-width: 100%;
+	margin-right: 10px;
 }
 
 .site-content {
@@ -145,6 +162,8 @@ iframe {
 #content-sidebar {
 	margin: 0;
 	width: 33.333%;
+	padding: 52px 0 0;
+	color: #333;
 }
 
 .post-thumbnail {
@@ -153,12 +172,8 @@ iframe {
 	margin: 0 10%;
 }
 
-.content-sidebar {
-	padding-top: 52px;
-}
-
 .content-sidebar .widget {
-	background: #f9f9f9;
+	background: #eee;
 	border-top: 1px solid #174374;
 	padding: 0 7% 7%;
 	width: 86%;
@@ -167,13 +182,13 @@ iframe {
 .content-sidebar .widget .widget-title {
 	border: none;
 	color: #174374;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 1.3em;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	top: -19px;
+	top: -27px;
 }
 
 .featured-content {
@@ -187,10 +202,11 @@ iframe {
 
 .featured-content-inner article {
 	background: #174374;
+	transition: all .25s ease 0;
 }
 
-.featured-content-inner article:hover,.featured-content-inner article.post-31091:hover {
-	background: #1ca574;
+.featured-content-inner article:hover {
+	background: #13699B;
 }
 
 .featured-content-inner article.post-31091 {
@@ -270,7 +286,7 @@ iframe {
 }
 
 input[type="button"],input[type="reset"],input[type="submit"],.widget input[type="button"],.widget input[type="reset"],.widget input[type="submit"] {
-	background-color: #1ca574 !important;
+	background-color: #114374 !important;
 }
 
 input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.widget input[type="button"]:hover,.widget input[type="reset"]:hover,.widget input[type="submit"]:hover {
@@ -306,13 +322,12 @@ input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,
 
 .street-sign,.wcorg-sponsors h2,.sponsor-level-title {
 	text-transform: none;
-	font-family: 'Tauri', 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1.5em;
 	font-weight: 700;
 	color: #fff;
-	background-color: #1ca574;
-	border-radius: 2px;
-	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1ca574;
+	background-color: #114374;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #114374;
 	padding: .375em;
 	display: inline-block;
 	margin: 1em 0 !important;
@@ -338,7 +353,7 @@ article.wcb_sponsor .entry-header,.site-content .has-post-thumbnail .entry-heade
 #content-sidebar .sponsor-level img {
 	background: #fff;
 	margin-bottom: 10px;
-	max-width: 94%;
+	width: 94%;
 	padding: 3%;
 }
 
@@ -468,6 +483,25 @@ span.mta-bullet {
 
 .mta-ez-pass {
 	background-color: #6E267B;
+}
+
+.contact-form textarea {
+	width: 98% !important;
+	border: 1px solid #ccc;
+	border-radius: 0;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"] {
+	width: 98% !important;
+	border: 1px solid #ccc;
+	border-radius: 0;
+}
+
+.contact-form select {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 13px;
+	width: 50%;
 }
 
 @media only screen and (min-width: 800px) {
