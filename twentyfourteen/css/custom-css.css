@@ -43,10 +43,10 @@ iframe {
 	max-width: 100% !important;
 }
 
-#page {
+.site {
 	display: block;
 	margin: 0 auto;
-	max-width: 1260px;
+	max-width: 960px;
 	background-color: transparent;
 }
 
@@ -60,6 +60,7 @@ iframe {
 
 .site-header {
 	background-color: rgba(0,0,0,0.6);
+	max-width: 960px;
 	position: fixed;
 	top: 0;
 }
